@@ -1,1 +1,1 @@
-export { default } form './Header.js'
+export { default } from './Header.js'

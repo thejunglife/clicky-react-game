@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './components/NavBar'
 import Game from './components/Game'
+import GameEngine from './services/GameEngine'
 
 
 // import './App.css';
@@ -8,8 +9,7 @@ import Game from './components/Game'
 function App() {
   return (
     <div>
-    <NavBar />
-    <h1>Hello World</h1>
+   <GameEngine />
     </div>
   );
 }

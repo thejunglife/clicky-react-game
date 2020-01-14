@@ -27,6 +27,8 @@ const NavBar = () => {
 
   const classes = useStyles();
 
+  const { score } = useContext(GameContext)
+
   return(
     
     <div className={classes.root}>
@@ -36,7 +38,7 @@ const NavBar = () => {
       <MenuIcon />
     </IconButton>
     <Typography variant="h6" className={classes.title}>
-      News
+      {score}
     </Typography>
     <Button color="inherit">Login</Button>
   </Toolbar>
