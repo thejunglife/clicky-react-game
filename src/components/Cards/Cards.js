@@ -28,8 +28,8 @@ const { characterArr, handleClick } = useContext(GameContext)
 
   return (
     <>
-       {characterArr.map(char => <Card onClick={handleClick} className={classes.card}>
-       <img id={char} src={char}/>
+       {characterArr.map((char, i) => <Card key={i} onClick={handleClick} className={classes.card}>
+       <img id={char.id} src={char.src}/>
         </Card>)}
         </>
   )

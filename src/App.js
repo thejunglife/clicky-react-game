@@ -4,7 +4,7 @@ import Game from './components/Game'
 import GameEngine from './services/GameEngine'
 
 
-// import './App.css';
+import './App.css';
 
 function App() {
   return (

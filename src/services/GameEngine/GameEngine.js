@@ -22,7 +22,16 @@ const GameEngine = () => {
   const [gameState, setGameState] = useState({
     score: 0,
     topScore: 0,
-    characterArr: [img1, img2, img3, img4, img5, img6, img7, img8],
+    characterArr: [
+      { src: img1,  id: 1},
+      { src: img2,  id: 2},
+      { src: img3,  id: 3},
+      { src: img4,  id: 4},
+      { src: img5,  id: 5},
+      { src: img6,  id: 6},
+      { src: img7,  id: 7},
+      { src: img8,  id: 8}
+  ],
     randomArr: []
 
   })  
@@ -41,10 +50,22 @@ const GameEngine = () => {
       }
       return arr;
     }
+
     let characterArr = shuffleArr(gameState.characterArr)
     setGameState({ ...gameState, characterArr })
 
-  }
+if (gameState.randomArr.includes(event.target.id) === false) {
+  let randomArr = gameState.randomArr.push(event.target.id)
+  let score = gameState.score++
+  setGameState({ ...gameState })
+} else {
+  let score = 0
+  let topScore = gameState.score
+  let randomArr = []
+  setGameState({ ...gameState, score, topScore, randomArr})
+}
+
+}
 
   return(
     <GameContext.Provider value = {gameState}>

@@ -27,7 +27,7 @@ const NavBar = () => {
 
   const classes = useStyles();
 
-  const { score } = useContext(GameContext)
+  const { score, topScore } = useContext(GameContext)
 
   return(
     
@@ -40,7 +40,7 @@ const NavBar = () => {
     <Typography variant="h6" className={classes.title}>
       {score}
     </Typography>
-    <Button color="inherit">Login</Button>
+    <Button color="inherit">{topScore}</Button>
   </Toolbar>
 </AppBar>
 </div>

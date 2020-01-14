@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-3.MuiGrid-item.MuiGrid-justify-xs-center.MuiGrid-grid-xs-6{
+  margin: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
