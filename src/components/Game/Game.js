@@ -1,28 +1,27 @@
-import React, { useContext } from 'react'
-import GameContext from '../../utils/GameContext'
+import React from 'react'
+// import GameContext from '../../utils/GameContext'
 import Cards from '../Cards'
 
 
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+// import { makeStyles } from '@material-ui/core/styles';
+// import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import '../../App.css';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
+// const useStyles = makeStyles(theme => ({
+//   root: {
+//     flexGrow: 1,
+//   },
+//   paper: {
+//     padding: theme.spacing(1),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//   },
+// }));
 
 const Game = () => {
 
-const classes = useStyles();
+// const classes = useStyles();
 
 return (
   <>

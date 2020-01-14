@@ -28,8 +28,19 @@
   color: #61dafb;
 }
 
+/* cards */
 .MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-3.MuiGrid-item.MuiGrid-justify-xs-center.MuiGrid-grid-xs-6{
   margin: auto;
+}
+
+.MuiBottomNavigation-root.makeStyles-root-233 {
+  background-color: blue;
+  width: 100%
+}
+
+/* header */
+h1, h2 {
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

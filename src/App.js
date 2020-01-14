@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import NavBar from './components/NavBar'
-import Game from './components/Game'
+import React from 'react';
+// import NavBar from './components/NavBar'
+// import Game from './components/Game'
 import GameEngine from './services/GameEngine'
 
 

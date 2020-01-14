@@ -27,20 +27,25 @@ const NavBar = () => {
 
   const classes = useStyles();
 
-  const { score, topScore } = useContext(GameContext)
+  const { score, topScore, startGame } = useContext(GameContext)
 
   return(
     
     <div className={classes.root}>
    <AppBar position="static">
   <Toolbar>
-    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-      <MenuIcon />
-    </IconButton>
-    <Typography variant="h6" className={classes.title}>
-      {score}
+    <Typography variant="h4" className={classes.title}>
+       Clicky Game
     </Typography>
-    <Button color="inherit">{topScore}</Button>
+    <Typography variant="h4" className={classes.title}>
+       {startGame}
+    </Typography>
+    <Typography variant="h4" className={classes.title}>
+       Current Score: {score}
+    </Typography>
+    <Typography variant="h4" className={classes.title}>
+       Top Score: {topScore}
+    </Typography>
   </Toolbar>
 </AppBar>
 </div>

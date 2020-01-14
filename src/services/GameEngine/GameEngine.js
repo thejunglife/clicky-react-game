@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
-import Cards from '../../components/Cards'
+// import Cards from '../../components/Cards'
 import Footer from '../../components/Footer'
 import Game from '../../components/Game'
 import Header from '../../components/Header'
@@ -32,14 +32,15 @@ const GameEngine = () => {
       { src: img7,  id: 7},
       { src: img8,  id: 8}
   ],
-    randomArr: []
+    randomArr: [],
+    startGame: 'Click an image to begin!'
 
   })  
 
   gameState.handleClick = event => {
 
     const shuffleArr = (arr) => {
-      var i,
+      var 
             j,
             temp;
       for (let i = arr.length -1; i > 0; i--) {
@@ -57,12 +58,18 @@ const GameEngine = () => {
 if (gameState.randomArr.includes(event.target.id) === false) {
   let randomArr = gameState.randomArr.push(event.target.id)
   let score = gameState.score++
-  setGameState({ ...gameState })
+  let startGame = 'You guessed correctly!'
+  setGameState({ ...gameState, startGame })
 } else {
   let score = 0
   let topScore = gameState.score
   let randomArr = []
-  setGameState({ ...gameState, score, topScore, randomArr})
+  let startGame = 'You guessed incorrectly!'
+  if (gameState.score > gameState.topScore) {
+  setGameState({ ...gameState, score, topScore, randomArr, startGame})
+  } else {
+    setGameState({ ...gameState, score, randomArr, startGame})
+  }
 }
 
 }
@@ -70,7 +77,9 @@ if (gameState.randomArr.includes(event.target.id) === false) {
   return(
     <GameContext.Provider value = {gameState}>
         <NavBar />
+        <Header />
         <Game />
+        <Footer />
     </GameContext.Provider>
   )
 }
